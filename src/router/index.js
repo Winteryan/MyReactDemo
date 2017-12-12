@@ -1,6 +1,6 @@
 import React from 'react';
 import { HashRouter, Route, IndexRoute, Switch, Link, Redirect } from 'react-router-dom';
-// import Base from './base.js';
+import Base from './base.js';
 import App from '../view/test/app.js';
 import App2 from '../view/test/app2.js';
 export default (
@@ -8,14 +8,14 @@ export default (
     <Switch>
       <Redirect from="/" to="/app" exact />
       <Route>
-        {/* <Base> */}
+         <Base> 
           <Switch>
             
             {/* <Redirect from="*" to="/404" /> */}
              <Route path="/app" component={App} />
              <Route path="/app2" component={App2} />
           </Switch>
-        {/* </Base> */}
+         </Base> 
       </Route>
     </Switch>
   </HashRouter>
